@@ -5227,8 +5227,8 @@ void RasterizerStorageGLES2::_render_target_allocate(RenderTarget *rt) {
 	/* For MSAA */
 
 #ifndef JAVASCRIPT_ENABLED
-#ifndef VITAGL
 	if (rt->msaa >= VS::VIEWPORT_MSAA_2X && rt->msaa <= VS::VIEWPORT_MSAA_16X && config.multisample_supported) {
+#ifndef VITAGL
 		rt->multisample_active = true;
 
 		static const int msaa_value[] = { 0, 2, 4, 8, 16 };
